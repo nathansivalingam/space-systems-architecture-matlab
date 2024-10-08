@@ -53,5 +53,3 @@ fprintf('Inclination,                         i = %.4f°\n', inclination);
 fprintf('Right ascension of ascending node,   Ω = %.4f°\n', RAAN);
 fprintf('Argument of perigee,                 ω = %.4f°\n', argumentOfPerigee);
 fprintf('True anomaly,                        θ = %.4f°\n', trueAnomaly);
-
-
