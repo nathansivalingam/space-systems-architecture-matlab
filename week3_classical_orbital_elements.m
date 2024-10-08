@@ -46,6 +46,12 @@ if dot(positionVector, velocityVector) < 0
     trueAnomaly = 360 - trueAnomaly;
 end
 
+% Bound status
+boundStatus = 'outbound';
+if cross(eccentricityVector, positionVector) < 0
+    boundStatus = 'inbound';
+end
+
 % Output
 fprintf('Semi-major axis,                     a = %.4f km\n', semiMajorAxis);
 fprintf('Eccentricity,                        e = %.4f\n', eccentricityMagnitude);
@@ -53,3 +59,4 @@ fprintf('Inclination,                         i = %.4f°\n', inclination);
 fprintf('Right ascension of ascending node,   Ω = %.4f°\n', RAAN);
 fprintf('Argument of perigee,                 ω = %.4f°\n', argumentOfPerigee);
 fprintf('True anomaly,                        θ = %.4f°\n', trueAnomaly);
+fprintf('Inbound or Outbound,                 %s\n', boundStatus);
