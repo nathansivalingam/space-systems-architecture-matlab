@@ -1,6 +1,6 @@
 % Input
-eccentricity = 0.72;
-meanAnomaly = deg2rad(4); % rad
+eccentricity = 0.37255;
+meanAnomaly = 3.6029; % rad
 chosenTolerance = 10.^-8;
 
 % Kepler's Equation
@@ -21,10 +21,10 @@ while true
     eta = eccentricAnomalyF / eccentricAnomalyFDash;
 
     % Step 4
-    if eta > chosenTolerance %#ok<BDSCI>
+    if abs(eta) > chosenTolerance %#ok<BDSCI>
         eccentricAnomaly = eccentricAnomaly - eta;
         fprintf('Iteration %d: deltaE = %.17f\n', i, eta);
-    elseif eta < chosenTolerance %#ok<BDSCI>
+    elseif abs(eta) < chosenTolerance %#ok<BDSCI>
         fprintf('Iteration %d: deltaE = %.17f\n', i, eta);
         break
     end
