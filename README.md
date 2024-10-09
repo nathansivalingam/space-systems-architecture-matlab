@@ -33,3 +33,6 @@ Input:
 Output:
 - Change in eccentric anomaly, deltaE, eta
 - Eccentric anomaly within chosen tolerance, E
+
+### week3_true_anomaly
+This needs to be done by hand to make sure that I get it.
