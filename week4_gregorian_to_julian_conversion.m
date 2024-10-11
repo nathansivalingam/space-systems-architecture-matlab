@@ -1,10 +1,10 @@
-% Input
+% Input (Assumed UT, What should I code if it changes?)
+day = 10;
+month = 09;
 year = 2022;
-month = 10;
-day = 01;
-hour = 02;
-minute = 45;
-second = 30;
+hour = 4;
+minute = 30;
+second = 00;
 
 % Julian Day (Date Component)
 J_0 = 367 * year - fix(7 * (year + fix((month + 9)/12))/4) + fix((275 * month)/9) + day + 1721013.5;
