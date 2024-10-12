@@ -13,4 +13,5 @@ J_0 = 367 * year - fix(7 * (year + fix((month + 9)/12))/4) + fix((275 * month)/9
 JD = J_0 + ((((second/60) + month)/60) + hour)/24;
 
 % Output
-fprintf('Julian Day Number, JD = %.1f days\n', JD);
+fprintf('Julian Day (Date Component), J_0 = %.1f days\n', J_0);
+fprintf('Julian Day Number,            JD = %.1f days\n', JD);
