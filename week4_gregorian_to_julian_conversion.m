@@ -7,7 +7,7 @@ minute = 30;
 second = 00;
 
 % Julian Day (Date Component)
-J_0 = 367 * year - fix(7 * (year + fix((month + 9)/12))/4) + fix((275 * month)/9) + day + 1721013.5;
+J_0 = 367 * year - floor(7 * (year + floor((month + 9)/12))/4) + floor((275 * month)/9) + day + 1721013.5;
 
 % Julian Day (Factoring in the Time Component)
 JD = J_0 + ((((second/60) + month)/60) + hour)/24;
