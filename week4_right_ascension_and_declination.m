@@ -1,5 +1,5 @@
 % Input
-positionVector = [-3000, -6000, -9000]; % r = Xi - Yj - Zk;
+positionVector = [-5368, -1784, -3691]; % r = Xi - Yj - Zk;
 
 % Functions
 positionMagnitude = sqrt(positionVector(1).^2 + positionVector(2).^2 + positionVector(3).^2);
