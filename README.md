@@ -1,38 +1,7 @@
 # AERO9500
 
-### week3_classical_orbital elements
-Input: 
-- Position and Velocity Vectors
-- Body specific gravitational parameter, mu
+These are an number of programs designed to aid in some aerospace calculations that are required for a Space Systems Architecture class (AERO9500) at UNSW Sydney.
 
-Output:
-- Six Orbital Elements
-- Bounding Status
-
-### week3_coe_two_line_elements
-Input:
-- inclination
-- RAAN
-- eccentricity
-- argumentOfPerigee
-- meanAnomaly
-- meanMotion
-
-Output:
-- Orbital period
-- Semi-major axis
-- Apogee altitude
-- Perigee altitude
-
-### week3_kepler_equation
-Input:
-- eccentricity, e
-- meanAnomaly, M
-- chosenTolerance
-
-Output:
-- Change in eccentric anomaly, deltaE, eta
-- Eccentric anomaly within chosen tolerance, E
-
-### week3_true_anomaly
-This needs to be done by hand to make sure that I get it.
+### Next Steps
+- Abstract some of the functions for existing questions
+- Come up with additional examples that might come up and program them accordingly so that all potential questions have some code attached
