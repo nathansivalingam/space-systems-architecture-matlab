@@ -1,6 +1,6 @@
 % Position and Velocity Vector Input ([xI, yJ, zK] format) [km]
-positionVector = [-1106, 445.2, 6886];
-velocityVector = [-1.897, 7.275, -0.7853];
+positionVector = [8228, 389, 6888];
+velocityVector = [-0.7000, 6.600, -0.6000];
 mu = 398600; % earth specific
 
 % Find all six COEs (units: km for distance and degrees for angles)
