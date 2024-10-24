@@ -4,14 +4,14 @@ twoLineElements = struct();
 % Add key-value pairs
 twoLineElements.inclination = 12.4651;
 twoLineElements.RAAN = 23.8468;
-twoLineElements.eccentricity = 0.011879;  % Fixing the eccentricity value format
+twoLineElements.eccentricity = 0.0011879;  % Fixing the eccentricity value format
 twoLineElements.argumentOfPerigee = 39.7523;
 twoLineElements.meanAnomaly = 150.0589;
 twoLineElements.meanMotion = 0.98309523;
 
 % Question specific constants
-bodyRadius = 6371; % km (earth specific)
-mu = 398600;
+bodyRadius = 6378; % km (earth specific)
+mu = 398600; % (earth specific)
 
 % Orbital period = inverse of mean motion
 orbitalPeriod = inv(twoLineElements.meanMotion) * 86400; %#ok<MINV>
@@ -28,4 +28,3 @@ fprintf('Orbital period,          P   = %.4f s\n', orbitalPeriod);
 fprintf('Semi-major axis,         a   = %.4f km\n', semiMajorAxis);
 fprintf('Apogee Altitude,         r_a = %.4f km\n', apogeeAltitude);
 fprintf('Perigee Altitude,        r_p = %.4f km\n', perigeeAltitude);
-

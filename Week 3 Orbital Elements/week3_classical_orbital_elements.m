@@ -1,6 +1,6 @@
 % Position and Velocity Vector Input ([xI, yJ, zK] format) [km]
-positionVector = [8228, 389, 6888];
-velocityVector = [-0.7000, 6.6000, -0.6000];
+positionVector = [-1106, 445.2, 6886];
+velocityVector = [-1.897, 7.275, -0.7853];
 mu = 398600; % earth specific
 
 % Find all six COEs (units: km for distance and degrees for angles)
@@ -18,7 +18,7 @@ for i = 1:length(positionVector)
     eccentricityVector(i) = (1/mu) * ((velocityMagnitude.^2 - (mu/positionMagnitude)) * positionVector(i) - (dot(positionVector, velocityVector) * velocityVector(i))); %#ok<SAGROW>
 end
 % UNCOMMENT TO VIEW ECCENTRICITY VECTOR
-fprintf('Eccentricity Vector, e_bold: %.4f I %.4f J %.4f K\n', eccentricityVector(1), eccentricityVector(2), eccentricityVector(3));
+% fprintf('Eccentricity Vector, e_bold: %.4f I %.4f J %.4f K\n', eccentricityVector(1), eccentricityVector(2), eccentricityVector(3));
 eccentricityMagnitude = sqrt(sum(eccentricityVector.^2));
 
 % Finding inclincation, i
