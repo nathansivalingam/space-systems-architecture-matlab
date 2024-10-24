@@ -1,7 +1,7 @@
 % This program is just to Solve Kepler's Equation using the Newton's Method
 % Input
-eccentricity = 0.72;
-meanAnomaly = 4 * (pi/180); % rad
+eccentricity = 0.37255;
+meanAnomaly = 3.6029; % rad (to go from deg to rad -> times 4 deg by Pi/180)
 chosenTolerance = 10.^-8;
 
 % Kepler's Equation

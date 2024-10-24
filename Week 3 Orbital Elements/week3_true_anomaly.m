@@ -19,12 +19,11 @@ angularMomentum = (perigeeRadius * (mu) * (1 + eccentricity * cos(perigeeAngle))
 orbitalPeriod = 2 * pi * sqrt(((apogeeRadius + perigeeRadius)/2).^3/mu); % seconds
 
 % Eccentric anomaly
-eccentricAnomaly = 2 * atan(sqrt((1 + eccentricity)/(1 - eccentricity)) * tan(trueAnomaly/2)); %#ok<NASGU> % rad
-eccentricAnomaly = 1.7281; % Delete this line once you here back from forum
+eccentricAnomaly = 2 * atan(sqrt((1 - eccentricity)/(1 + eccentricity)) * tand(trueAnomaly/2)); % rad
 
 % Mean anomaly
 meanAnomaly = eccentricAnomaly - eccentricity * sin(eccentricAnomaly);
-time = meanAnomaly/(2 * pi) * orbitalPeriod; % s % Find out where this equation came from 
+time = meanAnomaly/(2 * pi) * orbitalPeriod; % s
 fprintf('Time          = %.0f s\n', time);
 
 % b)
@@ -38,5 +37,8 @@ end
 eccentricAnomaly = 3.4794; % rad
 
 % Find the true anomaly
-trueAnomaly = 2 * atan(sqrt((1 + eccentricity)/(1 - eccentricity)) * tan(eccentricAnomaly/2)) + 2 * pi;
-fprintf('True anomaly  = %.1f°\n', rad2deg(trueAnomaly));
+trueAnomaly = rad2deg(2 * atan(sqrt((1 + eccentricity)/(1 - eccentricity)) * tan(eccentricAnomaly/2)));
+if trueAnomaly < 0
+    trueAnomaly = 360 + trueAnomaly;
+end
+fprintf('True anomaly  = %.1f°\n', trueAnomaly);
