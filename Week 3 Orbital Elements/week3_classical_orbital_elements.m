@@ -1,6 +1,6 @@
 % Position and Velocity Vector Input ([xI, yJ, zK] format) [km]
 positionVector = [8228, 389, 6888];
-velocityVector = [-0.7000, 6.600, -0.6000];
+velocityVector = [-0.7000, 6.6000, -0.6000];
 mu = 398600; % earth specific
 
 % Find all six COEs (units: km for distance and degrees for angles)
@@ -18,7 +18,7 @@ for i = 1:length(positionVector)
     eccentricityVector(i) = (1/mu) * ((velocityMagnitude.^2 - (mu/positionMagnitude)) * positionVector(i) - (dot(positionVector, velocityVector) * velocityVector(i))); %#ok<SAGROW>
 end
 % UNCOMMENT TO VIEW ECCENTRICITY VECTOR
-% fprintf('Eccentricity Vector, e_bold: %.4f I %.4f J %.4f K\n', eccentricityVector(1), eccentricityVector(2), eccentricityVector(3));
+fprintf('Eccentricity Vector, e_bold: %.4f I %.4f J %.4f K\n', eccentricityVector(1), eccentricityVector(2), eccentricityVector(3));
 eccentricityMagnitude = sqrt(sum(eccentricityVector.^2));
 
 % Finding inclincation, i
@@ -60,9 +60,9 @@ if dot(positionVector, velocityVector) < 0
     trueAnomaly = 360 - trueAnomaly;
 end
 
-% Bound status
+% Bound status (Ignore if at perigee or apogee)
 boundStatus = 'outbound (perigee to apogee)';
-if cross(eccentricityVector, positionVector) < 0
+if dot(positionVector, velocityVector) < 0
     boundStatus = 'inbound (apogee to perigee)';
 end
 
