@@ -2,7 +2,7 @@
 day = 10;
 month = 09;
 year = 2022;
-hour = 4;
+hour = 04;
 minute = 30;
 second = 00;
 

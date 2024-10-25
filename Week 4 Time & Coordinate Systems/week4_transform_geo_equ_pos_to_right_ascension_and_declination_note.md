@@ -1,0 +1,1 @@
+If you use are given the geodetic latitude, be sure to use the position vector in terms of geodetic latitude (on week 4 excel sheet)

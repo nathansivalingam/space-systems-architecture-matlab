@@ -24,11 +24,13 @@ end
 
 % [STEP 3] Greenwich sidereal time at 0h UT (theta_G_0)
 theta_G_0 = 100.4606184 + 36000.77004 * T_0 + 0.000387933 * T_0.^2 - 2.583 * 10.^-8 * T_0.^3;
+% disp(theta_G_0);
 theta_G_0 = rangeAdjust(theta_G_0);
 
 % [STEP 4] Greenwich sidereal time at any other UT (theta_G)
 UT = hr + (min/60) + (sec/60.^2);
 theta_G = theta_G_0 + 360.98564724 * (UT/24);
+% disp(theta_G);
 theta_G = rangeAdjust(theta_G);
 
 % Local sidereal time (theta)
