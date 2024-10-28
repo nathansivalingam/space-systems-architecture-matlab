@@ -16,7 +16,7 @@ fprintf('Semi-major Axis, a = %.1f km\n', a);
 
 % FIND THE MEAN MOTION, n
 n = sqrt(mu/a.^3);
-fprintf('Mean motion, n = %.6f km\n', n);
+fprintf('Mean motion, n = %.6f\n', n);
 
 % FIND THE NODE REGRESSION RATE, Omega_dot
 Omega_dot = (-3 * n * J2 * R0.^2 * cos(deg2rad(i)))/(2 * a.^2 * (1 - e.^2).^2);
