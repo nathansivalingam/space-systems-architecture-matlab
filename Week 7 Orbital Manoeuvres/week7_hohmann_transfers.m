@@ -1,34 +1,45 @@
 % Planetary Characteristics
-mu = 398600;
-R_0 = 6378; % km
+mu = 398600; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
+R_0 = 6378; % km [Input]
 
-% Initial Orbit Characteristics (assumed circular orbit)
-h_i = 300; % km
-r_i = h_i + R_0; % km
+% Initial Orbit Characteristics (for circular orbit: h_ai = h_pi)
+h_ai = 500; % km [Input]
+h_pi = 500; % km [Input]
+r_ai = h_ai + R_0; % km
+r_pi = h_pi + R_0; % km
+a_i = (r_ai + r_pi)/2; % km
+fprintf('a_i = %.0f km\n', a_i);
 
-% Final Orbit Characteristics (assumed circular orbit)
-h_f = 3000; % km
-r_f = h_f + R_0; % km
+% Final Orbit Characteristics (for circular orbit: h_af = h_pf)
+h_af = 1000; % km [Input]
+h_pf = 1000; % km [Input]
+r_af = h_af + R_0; % km
+r_pf = h_pf + R_0; % km
+a_f = (r_af + r_pf)/2; % km
+fprintf('a_f = %.0f km\n', a_f);
 
 % STEP 1: Find the semi-majro axis of the transfer orbit
-a_t = (r_i + r_f)/2; % km
-r_pt = r_i;
-r_at = r_f;
+r_pt = r_pi;
+r_at = r_af;
+a_t = (r_at + r_pt)/2; % km
+fprintf('a_t = %.0f km\n', a_t);
 
 % STEP 2: Find deltaV_1
 V_pt = sqrt(2*mu/r_pt - mu/a_t); % km/s
-V_i = sqrt(mu/r_pt); % km/s
+V_i = sqrt(2*mu/r_pi - mu/a_i); % km/s
 deltaV_1 = abs(V_pt - V_i); % km/s
+fprintf('ΔV_1 = %.4f km/s\n', deltaV_1);
 
 % STEP 3: Find deltaV_2
 V_at = sqrt(2*mu/r_at - mu/a_t); % km/s
-V_f = sqrt(mu/r_at); % km/s
+V_f = sqrt(2*mu/r_af - mu/a_f); % km/s
 deltaV_2 = abs(V_at - V_f); % km/s
+fprintf('ΔV_2 = %.4f km/s\n', deltaV_2);
 
 % STEP 4: Find deltaV
 deltaV = deltaV_1 + deltaV_2; % km/s
-fprintf('Total deltaV required for a Hohmanns transfer between to coplanar circular orbits = %.4f km/s\n', deltaV);
+fprintf('ΔV = %.4f km/s\n', deltaV);
 
 % STEP 5: Transfer orbit time
 TOF = 1/2 * 2 * pi * sqrt(((a_t).^3)/mu); % seconds
-fprintf('Transfer orbit time = %.0f seconds\n', TOF);
+fprintf('TOF = %.0f seconds = %.1f days\n', TOF, TOF / 86400);
