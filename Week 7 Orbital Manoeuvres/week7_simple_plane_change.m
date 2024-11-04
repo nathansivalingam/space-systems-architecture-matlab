@@ -4,15 +4,15 @@ mu = 398600; % [Input] (Change when the transfer orbit is between two planets, m
 R_0 = 6378; % km [Input]
 
 % Initial Orbit Characteristics
-i_i = 57; % deg [Input]
-h_i = 130; % km [Input]
+i_i = 28.5; % deg [Input]
+h_i = 300; % km [Input]
 r_i = h_i + R_0; % km
 a_i = r_i; % km
 fprintf('a_i = %.0f km\n', a_i);
 
 % Final Orbit Characteristics
-i_f = 90; % deg [Input]
-h_f = 130; % km [Input]
+i_f = 0; % deg [Input]
+h_f = 300; % km [Input]
 r_f = h_f + R_0; % km
 a_f = r_f; % km
 fprintf('a_f = %.0f km\n', a_f);

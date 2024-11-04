@@ -38,6 +38,7 @@ DeltaV_1 = abs(V_pt - V_i); % km/s
 fprintf('ΔV_1 = %.4f km/s\n', DeltaV_1);
 
 % (c) What is the combined plane change ΔV to go from the transfer orbit to the final orbit and change the inclination?
+% DeltaV_2
 V_i = sqrt(2 * mu / r_at - mu / a_t);
 V_f = sqrt(2 * mu / r_af - mu / a_f);
 alpha = abs(i_f - i_i);
