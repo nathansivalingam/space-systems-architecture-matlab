@@ -29,4 +29,4 @@ fprintf('ΔV = %.4f km/s\n', DeltaV);
 % Spacecraft now needs to change RAAN by 35 deg, find required DeltaV (Q3 Specific)
 alpha = 35; % deg [Input]
 DeltaV = 2 * V_i * sind(alpha/2);
-fprintf('ΔV = %.4f km/s\n', DeltaV);
+fprintf('ΔV_RAAN = %.4f km/s\n', DeltaV);
