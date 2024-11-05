@@ -2,14 +2,14 @@
 mu = 398600.4; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
 R_0 = 6378; % km [Input]
 
-% (assumed circular orbit)
-h_t = 240; % km [Input]
-h_i = 120; % km [Input]
+% (assumed initial and final circular orbit)
+h_t = 410; % km [Input of the radius of the final orbit]
+h_i = 200; % km [Input of the radius of the initial orbit]
 r_t = R_0 + h_t; % km
 r_i = R_0 + h_i; % km
 
 % Additional characteristics
-Phi_i = deg2rad(135); % rad [Input]
+Phi_i = deg2rad(30); % rad [Input]
 
 % TOF of the transfer orbit
 a_t = (r_t + r_i)/2; % km
