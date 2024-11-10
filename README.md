@@ -8,9 +8,9 @@ These are an number of programs designed to aid in some aerospace calculations t
 - Week 3 Workshop Questions
 - Week 4 Workshop Questions
 - Week 5 Workshop Questions
+- Week 7 Workshop Questions
 
 ### Next Steps
-- Week 7 Workshop Questions
 - Week 8 Workshop Questions
 - Week 9 Workshop Questions
 - Week 10 Workshop Questions
