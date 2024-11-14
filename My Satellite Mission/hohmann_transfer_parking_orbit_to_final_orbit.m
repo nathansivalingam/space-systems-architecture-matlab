@@ -26,19 +26,23 @@ fprintf('a_t = %.6f km\n', a_t);
 
 % STEP 2: Find deltaV_1
 V_at = sqrt(2*mu/r_at - mu/a_t); % km/s
-V_i = sqrt(2*mu/r_pi - mu/a_i); % km/s
+fprintf('V_at = %.6f m/s\n', V_at * 10.^3); % km/s
+V_i = sqrt(2*mu/r_ai - mu/a_i); % km/s
+fprintf('V_i = %.6f m/s\n', V_i * 10.^3); % km/s
 DeltaV_1 = abs(V_at - V_i); % km/s
 fprintf('ΔV_1 = %.6f m/s\n', DeltaV_1 * 10.^3);
 
 % STEP 3: Find deltaV_2
 V_pt = sqrt(2*mu/r_pt - mu/a_t); % km/s
+fprintf('V_at = %.6f m/s\n', V_pt * 10.^3); % km/s
 V_f = sqrt(2*mu/r_af - mu/a_f); % km/s
+fprintf('V_f = %.6f m/s\n', V_f * 10.^3); % km/s
 DeltaV_2 = abs(V_pt - V_f); % km/s
 fprintf('ΔV_2 = %.6f m/s\n', DeltaV_2 * 10.^3);
 
 % STEP 4: Find deltaV
 DeltaV = DeltaV_1 + DeltaV_2; % km/s
-fprintf('ΔV = %.6f km/s\n', DeltaV);
+fprintf('ΔV = %.6f m/s\n', DeltaV * 10.^3);
 
 % STEP 5: Transfer orbit time
 TOF = 1/2 * 2 * pi * sqrt(((a_t).^3)/mu); % seconds
