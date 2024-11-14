@@ -1,9 +1,9 @@
 % Planetary Characteristics
-mu = 398600; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
+mu = 398600; % [Input]
 R_0 = 6378.14; % km [Input]
 
 % Initial Orbit Characteristics (for circular orbit: h_ai = h_pi)
-a_i = 7378.14; % R_0 + 600;
+a_i = 7378.14; % R_0 + 1000;
 e_i = 0.001; % 0.001;
 r_ai = a_i * (1 + e_i); % km
 r_pi = a_i * (1 + e_i); % km
