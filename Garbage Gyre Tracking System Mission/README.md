@@ -1,4 +1,4 @@
-## Garbage Gyre Tracking System Mission System 🚀
+## Garbage Gyre Tracking System Mission 🚀
 ### Welcome to my final report repository!👋
 
 Here you will find many of the calculations conducted in the final report appendix. The main difference is that they are written using MATLAB. 
