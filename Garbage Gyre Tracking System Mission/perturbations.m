@@ -2,7 +2,7 @@
 % Classic Orbital Elements [MUST POPULATE WITH CORRECT DATA]
 % ===============================================================================
 a = 6838.14; % km
-i = 98; % deg
+i = 97.4; % deg
 e = 0.001;
 mu = 398600; 
 
