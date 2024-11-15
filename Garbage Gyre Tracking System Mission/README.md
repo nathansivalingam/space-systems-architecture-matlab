@@ -2,7 +2,7 @@
 ### Welcome to my final report repository!👋
 
 Here you will find many of the calculations conducted in the final report appendix. The main difference is that they are written using MATLAB. 
-The reason behind this was to streamline the design process and make it easier to implement design changes in the future.
+The reason behind this repository was to streamline the design process and make it easier to implement design changes in the future.
 
 Currently the following programs have been written:
 - The increase in orbital period due to a reduuction in altitude. [Innovations](https://github.com/nathansivalingam/space-systems-architecture-matlab/blob/main/Garbage%20Gyre%20Tracking%20System%20Mission/innovations.m)
