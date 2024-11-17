@@ -16,9 +16,9 @@ function [beta_AN, beta_DN] = launch_windows(i, L_0)
 
     %% Launch Azimuths (Deg)
     sin_beta = cosd(i) / cosd(L_0); % deg
-    fprintf('sin_beta = %.4f\n', sin_beta);
+    fprintf('sin(β) = %.4f\n', sin_beta);
     beta = asind(cosd(i)/cosd(L_0));
-    fprintf('beta = %.4f°\n', beta);
+    fprintf('β = %.4f°\n', beta);
     beta_AN = beta; % deg
     fprintf('β_AN (before correction) = %.4f°\n', beta_AN);
     beta_AN = angleCorrectionFn(beta_AN);

@@ -8,9 +8,9 @@ function design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0)
     % additional calcs
     a = R_burnout;
 
-    % v_loss_gravity
-    v_loss_gravity = sqrt( (2 * mu * (R_burnout - R_launch) ) / (R_burnout * R_launch) );
-    fprintf('v_loss = %.4f km/s\n', v_loss_gravity);
+    % v_gravity_loss
+    v_gravity_loss = sqrt( (2 * mu * (R_burnout - R_launch) ) / (R_burnout * R_launch) );
+    fprintf('v_loss = %.4f km/s\n', v_gravity_loss);
 
     % v_burnout
     v_burnout = sqrt( ((2 * mu) / R_burnout) - (mu / a) );
@@ -35,7 +35,7 @@ function design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0)
     % deltav_needed
     i = deltav_burnout_south;
     j = deltav_burnout_east - v_launch_site;
-    k = deltav_burnout_zenith + v_loss_gravity;
+    k = deltav_burnout_zenith + v_gravity_loss;
     deltav_needed = sqrt(i.^2 + j.^2 + k.^2);
     fprintf('deltav_needed = [%.4f, %.4f, %.4f] = %.4f km/s\n', i, j, k, deltav_needed);
 
