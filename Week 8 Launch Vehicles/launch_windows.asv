@@ -6,7 +6,7 @@ clc
 
 %% Input
 L_0 = 28.5; % deg [Input] Latitude of (E.g., Kennedy Space Center)
-i = 28.5; % deg [Input] (Orbit inclination)
+i =28.5; % deg [Input] (Orbit inclination)
 
 %% Launch Window Availability (in One Day)
 function output = launchWindowAvailabilityFn(i, L_0)
@@ -17,6 +17,7 @@ function output = launchWindowAvailabilityFn(i, L_0)
     elseif (i < L_0)
         fprintf('Launch windows available: 0\n');
     end
+    
 end
 
 %% Launch Azimuths (Deg)
