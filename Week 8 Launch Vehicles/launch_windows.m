@@ -3,8 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
 function [alpha, gamma, beta_AN, beta_DN] = launch_windows(L_0, i)
-    %% Clear Terminal
-    clc
+    fprintf('LAUNCH WINDOWS:\n');
 
     %% Launch Window Availability (in One Day)
     if (i > L_0)
