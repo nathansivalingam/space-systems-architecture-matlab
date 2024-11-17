@@ -2,7 +2,7 @@
 %                  LAUNCH WINDOWS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function [alpha, gamma, beta_AN, beta_DN] = launch_windows(L_0, i)
+function [beta_AN, beta_DN] = launch_windows(i, L_0)
     fprintf('LAUNCH WINDOWS:\n');
 
     %% Launch Window Availability (in One Day)
@@ -15,17 +15,15 @@ function [alpha, gamma, beta_AN, beta_DN] = launch_windows(L_0, i)
     end
 
     %% Launch Azimuths (Deg)
-    alpha = 180 - i; % deg
-    fprintf('α = %.4f°\n', alpha);
-    sin_gamma = cosd(alpha)/cosd(L_0);
-    fprintf('sin(γ) = %.4f\n', sin_gamma);
-    gamma = asind(sin_gamma); % deg
-    fprintf('Launch azimuth, γ = %.4f°\n', gamma);
-    beta_AN = 360 - gamma; % deg
+    sin_beta = cosd(i) / cosd(L_0); % deg
+    fprintf('sin_beta = %.4f\n', sin_beta);
+    beta = asind(cosd(i)/cosd(L_0));
+    fprintf('beta = %.4f°\n', beta);
+    beta_AN = beta; % deg
     fprintf('β_AN (before correction) = %.4f°\n', beta_AN);
     beta_AN = angleCorrectionFn(beta_AN);
     fprintf('β_AN (after correction) = %.4f°\n', beta_AN);
-    beta_DN = 180 + gamma; % deg
+    beta_DN = 180 - beta; % deg
     fprintf('β_DN (before correction) = %.4f°\n', beta_DN);
     beta_DN = angleCorrectionFn(beta_DN);
     fprintf('β_DN (after correction) = %.4f°\n', beta_DN);
