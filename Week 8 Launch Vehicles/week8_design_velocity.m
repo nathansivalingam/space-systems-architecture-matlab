@@ -2,7 +2,7 @@
 %                DESIGN VELOCITY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a)
+function week8_design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a)
     fprintf('\nDESIGN VELOCITY:');
 
     % v_gravity_loss

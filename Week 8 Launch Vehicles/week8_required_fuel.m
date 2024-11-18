@@ -2,7 +2,7 @@
 %                 REQUIRED FUEL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function [m_p] = required_fuel(m_f, deltav, I_sp, g_0)
+function [m_p] = week8_required_fuel(m_f, deltav, I_sp, g_0)
     fprintf('\nREQUIRED FUEL:');
     
     % Function to find required propellant (kg)

@@ -2,7 +2,7 @@
 %                  LAUNCH WINDOWS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function [beta_AN, beta_DN] = launch_windows(i, L_0)
+function [beta_AN, beta_DN] = week8_launch_windows(i, L_0)
     fprintf('LAUNCH WINDOWS:\n');
 
     %% Launch Window Availability (in One Day)

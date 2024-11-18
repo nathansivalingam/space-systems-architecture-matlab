@@ -2,7 +2,7 @@
 %          DIFFERENCES IN SPECIFIC IMPULSE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function [deltav] = specific_impulse(I_sp, g_0, R, deltav)
+function [deltav] = week8_specific_impulse(I_sp, g_0, R, deltav)
     fprintf('\nSPECIFIC IMPULSE:');
     
     if isnan(deltav)

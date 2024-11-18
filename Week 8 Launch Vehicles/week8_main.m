@@ -7,7 +7,7 @@ clc
 i = 9.05; % [Input]
 L_0 = 9.05; % [Input]
 
-[beta_AN, beta_DN] = launch_windows(i, L_0);
+[beta_AN, beta_DN] = week8_launch_windows(i, L_0);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              DESIGN VELOCITY
@@ -21,7 +21,7 @@ beta = beta_DN; % [Input] (Launch is planned to be near the descending node.)
 R_burnout = R_launch + h;
 a = R_burnout; % [Input] additional calcs
 
-design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a);
+week8_design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              REQUIRED FUEL
@@ -31,7 +31,7 @@ deltav = 3.923 * 10.^3; % m/s (Found from Hohmann transfer questionj)
 I_sp = 290; % seconds
 g_0 = 9.8; % Acceleration due to gravity (m / s^2)
 
-[m_p] = required_fuel(m_f, deltav, I_sp, g_0);
+week8_required_fuel(m_f, deltav, I_sp, g_0);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %               SPECIFIC IMPULSE
@@ -41,4 +41,4 @@ g_0 = 9.8; % Acceleration due to gravity (m / s^2)
 R = 25; % Mass ratio
 deltav = NaN; % m/s
 
-specific_impulse(I_sp, g_0, R, deltav);
+week8_specific_impulse(I_sp, g_0, R, deltav);
