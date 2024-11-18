@@ -1,3 +1,4 @@
+%% MAKE IT WORK FOR QUESTION 6
 clc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              LAUNCH WINDOWS
@@ -17,7 +18,9 @@ v_losses = 0.8; % [Input] (km/s)
 beta = beta_DN; % [Input] (Launch is planned to be near the descending node.)
 
 R_burnout = R_launch + h;
-design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0);
+a = R_burnout; % [Input] additional calcs
+
+design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              REQUIRED FUEL

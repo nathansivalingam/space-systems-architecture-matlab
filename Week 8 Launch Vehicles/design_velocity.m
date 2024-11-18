@@ -2,11 +2,8 @@
 %                DESIGN VELOCITY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Main Function
-function design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0)
+function design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a)
     fprintf('\nDESIGN VELOCITY:');
-    
-    % additional calcs
-    a = R_burnout;
 
     % v_gravity_loss
     v_gravity_loss = sqrt( (2 * mu * (R_burnout - R_launch) ) / (R_burnout * R_launch) );
