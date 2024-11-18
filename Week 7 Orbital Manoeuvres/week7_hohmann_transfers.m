@@ -43,3 +43,6 @@ fprintf('ΔV = %.4f km/s\n', DeltaV);
 % STEP 5: Transfer orbit time
 TOF = 1/2 * 2 * pi * sqrt(((a_t).^3)/mu); % seconds
 fprintf('TOF = %.0f seconds = %.1f days\n', TOF, TOF / 86400);
+
+img = imread(fullfile('hohmann_transfer_diagram.png'));
+imshow(img);

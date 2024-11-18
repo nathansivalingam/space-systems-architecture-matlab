@@ -1,6 +1,7 @@
-clc
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %            INTERPLANETARY TRANSFER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-week9_interplanetary_transfer();
+%% Main Function
+function week9_interplanetary_transfer()
+    
+end
