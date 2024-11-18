@@ -26,9 +26,9 @@ week8_design_velocity(mu, R_burnout, R_launch, phi, v_losses, beta, L_0, a);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              REQUIRED FUEL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-m_f = 850; % kg
-deltav = 3.923 * 10.^3; % m/s (Found from Hohmann transfer questionj)
-I_sp = 290; % seconds
+m_f = 1200; % kg
+deltav = 3.8160 * 10.^3; % m/s (Found from Hohmann transfer question)
+I_sp = 300; % seconds
 g_0 = 9.8; % Acceleration due to gravity (m / s^2)
 
 week8_required_fuel(m_f, deltav, I_sp, g_0);
@@ -36,7 +36,7 @@ week8_required_fuel(m_f, deltav, I_sp, g_0);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %               SPECIFIC IMPULSE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-I_sp = 300; % seconds
+I_sp = 2500; % seconds
 g_0 = 9.8; % Acceleration due to gravity (m / s^2)
 R = 25; % Mass ratio
 deltav = NaN; % m/s
