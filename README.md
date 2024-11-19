@@ -12,7 +12,7 @@ These are an number of programs designed to aid in some aerospace calculations t
 - Week 8 Workshop Questions
 
 ### In Progress
-- Week 9 Workshop Questions
+- Week 9 Workshop Questions (6/14)
 
 ### Next Steps
 - Revist Workshop Questions 1-7 and create main files for each week. It should make it easier to interact with during the final exam
