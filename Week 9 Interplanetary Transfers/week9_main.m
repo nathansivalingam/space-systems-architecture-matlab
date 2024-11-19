@@ -2,8 +2,8 @@ clc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              SPHERE OF INFLUENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-a_smallPlanet = 228000000; % km
-m_smallPlanet =  641.9e21; % kg
+a_smallPlanet = 149600000; % km
+m_smallPlanet = 5.974e24; % kg
 m_bigPlanet = 1.989e30; % kg
 [R_SOI] = week9_spheres_of_influence(a_smallPlanet, m_smallPlanet, m_bigPlanet);
 
