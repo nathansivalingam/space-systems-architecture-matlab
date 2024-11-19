@@ -10,7 +10,9 @@ L_0 = 9.05; % [Input]
 [beta_AN, beta_DN] = week8_launch_windows(i, L_0);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%              DESIGN VELOCITY
+%              DESIGN VELOCITY 
+% [REMEMBER TO CHANGE LAUNCH WINDOWS VARIABLES
+%  FOR THIS SECTION AS WELL]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 mu = 398600; % [Input]
 h = 500; % [Input]
