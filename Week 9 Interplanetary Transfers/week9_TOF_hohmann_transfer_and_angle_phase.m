@@ -28,4 +28,8 @@ function [TOF] = week9_TOF_hohmann_transfer_and_angle_phase(a_home, a_target, mu
     % Time wait
     T_wait = (deg2rad(phi_initial) - phi_final) / (omega_home - omega_target);
     fprintf('T_wait = %.4f s = %.4f min = %.4f hr = %.4f days = %.4f months = %.4f years\n', T_wait, T_wait / 60, T_wait / 60 / 60, T_wait / 60 / 60 / 24, T_wait / 60 / 60 / 24 / 30.44, T_wait / 60 / 60 / 24 / 365.25);
+
+    % Image
+    % img = imread(fullfile('waitTimeDiagram.png'));
+    % imshow(img);
 end
