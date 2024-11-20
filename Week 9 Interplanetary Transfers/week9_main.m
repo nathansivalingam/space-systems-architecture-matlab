@@ -37,7 +37,7 @@ week9_TOF_hohmann_transfer_and_angle_phase(a_home, a_target, mu_Sun, phi_initial
 a_park_e = 12756; % km
 mu = 398600; % km^3/s^2
 
-week9_parking_orbit_to_R_SOI(parking_orbit_radius, mu);
+week9_parking_orbit_to_R_SOI(a_park_e, mu);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              ΔV_boost and ΔV_retro (QUESTION 10 STILL NEEDS TO BE FINISHED)
@@ -55,8 +55,16 @@ week9_parking_orbit_to_R_SOI(parking_orbit_radius, mu);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %            EARTH ORBIT -> MARS ORBIT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-a_Earth = 149600000; % km
-a_Mars = 227800000; % km
-mu_Sun = 132712000000; % km
+a_home = 149600000; % km
+r_home = 6697; % km [PARKING ORBIT]
+mu_home = 398600; % km^3/s^2
 
-week9_interplanetary_transfer(a_Earth, a_Mars, mu_Sun);
+a_target = 227800000; % km
+r_target = 3580; % km [PARKING ORBIT]
+mu_target = 42828; % km^3/s^2
+
+mu_centre = 132712000000; % km
+
+phi_initial = deg2rad(50); % km [MUST BE RADIANS]
+
+week9_interplanetary_transfer(a_home, r_home, mu_home, a_target, r_target, mu_target, mu_centre, phi_initial);
