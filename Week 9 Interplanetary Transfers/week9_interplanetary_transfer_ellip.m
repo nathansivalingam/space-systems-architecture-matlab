@@ -1,25 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              INTERPLANETARY TRANSFER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function week9_interplanetary_transfer(a_home, r_home, mu_home, a_target, r_target, mu_target, mu_centre, phi_initial)
+function week9_interplanetary_transfer_ellip(a_transfer, r_home_depart, r_target_arrive, mu_centre, a_home, a_target, r_home_park_depart, r_target_park_arrive, mu_home, a_home_park, mu_target, a_target_park, phi_initial)
     fprintf('\nINTERPLANETARY TRANSFER:');
-    a_transfer = (a_home + a_target) / 2;
     fprintf('a_transfer = %.4f km\n', a_transfer);
 
     %% a
-    V_infty_home = abs(sqrt((2 * mu_centre)/a_home - mu_centre/a_transfer) - sqrt((2 * mu_centre)/a_home - mu_centre/a_home));
+    V_infty_home = abs(sqrt((2 * mu_centre)/r_home_depart - mu_centre/a_transfer) - sqrt((2 * mu_centre)/r_home_depart - mu_centre/a_home));
     fprintf('V_infty_home = %.4f km/s\n', V_infty_home);
     
     %% b
-    V_infty_target = abs(sqrt((2 * mu_centre)/a_target - mu_centre/a_target) - sqrt((2 * mu_centre)/a_target - mu_centre/a_transfer));
+    V_infty_target = abs(sqrt((2 * mu_centre)/r_target_arrive - mu_centre/a_target) - sqrt((2 * mu_centre)/r_target_arrive - mu_centre/a_transfer));
     fprintf('V_infty_target = %.4f km/s\n', V_infty_target);
 
     %% c
-    deltaV_boost = abs(sqrt((2 * mu_home)/r_home + V_infty_home.^2) - sqrt(mu_home / r_home));
+    deltaV_boost = abs(sqrt((2 * mu_home)/r_home_park_depart + V_infty_home.^2) - sqrt((2 * mu_home) / r_home_park_depart - mu_home / a_home_park));
     fprintf('deltaV_boost = %.4f km/s\n', deltaV_boost);
 
     %% d
-    deltaV_retro = abs(sqrt(mu_target / r_target) - sqrt((2 * mu_target)/r_target + V_infty_target.^2));
+    deltaV_retro = abs(sqrt((2 * mu_target) / r_target_park_arrive - mu_target / a_target_park) - sqrt((2 * mu_target)/r_target_park_arrive + V_infty_target.^2));
     fprintf('deltaV_retro = %.4f km/s\n', deltaV_retro);
 
     %% e
