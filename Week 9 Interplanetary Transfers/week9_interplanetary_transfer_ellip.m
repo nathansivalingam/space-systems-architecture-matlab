@@ -2,7 +2,7 @@
 %              INTERPLANETARY TRANSFER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function week9_interplanetary_transfer_ellip(a_transfer, r_home_depart, r_target_arrive, mu_centre, a_home, a_target, r_home_park_depart, r_target_park_arrive, mu_home, a_home_park, mu_target, a_target_park, phi_initial)
-    fprintf('\nINTERPLANETARY TRANSFER:');
+    fprintf('\nINTERPLANETARY TRANSFER (ELLIP):');
     fprintf('a_transfer = %.4f km\n', a_transfer);
 
     %% a
