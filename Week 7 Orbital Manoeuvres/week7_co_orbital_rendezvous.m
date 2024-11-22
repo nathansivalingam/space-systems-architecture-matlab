@@ -1,20 +1,23 @@
+clc
 % Planetary Characteristics
-mu = 398600.4; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
+mu = 398600; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
 R_0 = 6378; % km [Input]
 
 % Assumed circular orbit 
-h_t = 240; % km
-Phi_i = deg2rad(35); % rad
-target_status = 'behind'; % Is the target behind or ahead of the interceptor
+h_t = 350; % km
+Phi_i = deg2rad(5.116); % rad
+target_status = 'ahead'; % Is the target behind or ahead of the interceptor
 r_t = R_0 + h_t; % km
 
 % TOF
 omega_t = sqrt(mu / r_t.^3);
 fprintf('ω_t = %.8f rad\n', omega_t);
 
-Phi_travel = Phi_i; % rad
-if target_status == 'behind' %#ok<STCMP,BDSCA,BDSCI>
-    Phi_travel = 2*pi + Phi_i;
+Phi_travel = Phi_i; %#ok<NASGU> % rad
+if strcmp('behind', target_status)
+    Phi_travel = 2*pi + Phi_i; %#ok<UNRCH>
+elseif strcmp('ahead', target_status) %#ok<UNRCH>
+    Phi_travel = 2*pi - Phi_i;
 end
 fprintf('Φ_travel = %.4f rad\n', Phi_travel);
 
@@ -31,8 +34,8 @@ fprintf('V_i = %.4f km/s\n', V_i);
 V_ph = sqrt(2 * mu / r_t - mu / a_phasing);
 fprintf('V_ph = %.4f km/s\n', V_ph);
 DeltaV = abs(V_ph - V_i);
-fprintf('ΔV = %.4f km/s\n', DeltaV);
+fprintf('ΔV_1 = %.4f km/s\n', DeltaV);
 DeltaV_total = DeltaV * 2; % Mutliply by 2 because we move in and out of the orbit
-fprintf('ΔV_total = %.4f km/s\n', DeltaV_total);
+fprintf('ΔV_total = %.4f km/s = %.4f m/s\n', DeltaV_total, DeltaV_total * 10.^3);
 
 % Add the final co-orbital rendezvous question later as part of revision

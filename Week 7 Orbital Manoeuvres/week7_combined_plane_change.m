@@ -1,31 +1,32 @@
+clc
 %%% IMPORTANT NOTE!!! THIS PROGRAM ONLY WORKS FOR CIRCULAR ORBITS %%%
 % Planetary Characteristics
 mu = 398600.4; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
-R_0 = 6378; % km [Input]
+R_0 = 6378.14; % km [Input]
 
 % Initial Orbit Characteristics
-i_i = 28; % deg [Input]
-h_ai = 150; % km [Input]
-h_pi = 150; % km [Input]
+i_i = 28.5; % deg [Input]
+h_ai = 500; % km [Input]
+h_pi = 500; % km [Input]
 r_ai = h_ai + R_0; % km
 r_pi = h_pi + R_0; % km
 a_i = (r_ai + r_pi)/2; % km
-fprintf('a_i = %.0f km\n', a_i);
+fprintf('a_i = %.4f km\n', a_i);
 
 % Final Orbit Characteristics
-i_f = 45; % deg [Input]
-h_af = 20000; % deg [Input]
-h_pf = 20000; % km [Input]
+i_f = 55; % deg [Input]
+h_af = 20469; % deg [Input]
+h_pf = 20341; % km [Input]
 r_af = h_af + R_0; % km
 r_pf = h_pf + R_0; % km
 a_f = (r_af + r_pf)/2; % km
-fprintf('a_f = %.0f km\n', a_f);
+fprintf('a_f = %.4f km\n', a_f);
 
 % Tranfer orbit characteritics
 r_pt = r_pi;
 r_at = r_af;
 a_t = (r_at + r_pt)/2; % km
-fprintf('a_t = %.1f km\n', a_t);
+fprintf('a_t = %.4f km\n', a_t);
 
 % (a) What is the energy of the transfer orbit
 varEpsilon = - mu / (2 * a_t);
@@ -43,7 +44,7 @@ V_i = sqrt(2 * mu / r_at - mu / a_t);
 V_f = sqrt(2 * mu / r_af - mu / a_f);
 alpha = abs(i_f - i_i);
 DeltaV_2 = sqrt((V_i).^2 + (V_f).^2 - 2 * V_i * V_f * cosd(alpha));
-fprintf('ΔV_2 = %.4f km/s\n', DeltaV_2);
+fprintf('Combined Plane Change, ΔV_2 = %.4f km/s\n', DeltaV_2);
 
 % The total change in velocity DeltaV
 DeltaV = DeltaV_1 + DeltaV_2;

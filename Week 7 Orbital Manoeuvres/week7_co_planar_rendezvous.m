@@ -1,7 +1,9 @@
+clc
 % Planetary Characteristics
-mu = 398600.4; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
-R_0 = 6378; % km [Input]
+mu = 398600; % [Input] (Change when the transfer orbit is between two planets, mu = mu_sun)
+R_0 = 6378.14; % km [Input]
 
+% t = target, i = interceptor
 % (assumed initial and final circular orbit)
 h_t = 410; % km [Input of the radius of the final orbit]
 h_i = 200; % km [Input of the radius of the initial orbit]
