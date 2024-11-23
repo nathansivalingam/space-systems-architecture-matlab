@@ -91,10 +91,10 @@ week9_interplanetary_transfer_ellip(a_transfer, r_home_depart, r_target_arrive, 
 % Works for Q10-13
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 a_home = 149600000; % km
-r_home = 6697; % km [PARKING ORBIT]
+r_home = 6371 + 300; % km [PARKING ORBIT]
 mu_home = 398600; % km^3/s^2
 
-a_target = 227800000; % km
+a_target = 227900000; % km
 r_target = 3580; % km [PARKING ORBIT]
 mu_target = 42828; % km^3/s^2
 

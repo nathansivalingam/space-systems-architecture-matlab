@@ -1,7 +1,7 @@
 clc
 % !IMPORTANT, Omega_dot CALCULATION ASSUMES THE PLANET IS EARTH
 e = 0;
-a = 400 + 6378.14; % km
+a = 7078; % km
 
 degrees = 360;
 days = 365;
