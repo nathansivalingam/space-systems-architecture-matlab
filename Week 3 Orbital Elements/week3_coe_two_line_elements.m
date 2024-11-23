@@ -1,3 +1,4 @@
+clc
 % Create a structure as a dictionary
 twoLineElements = struct();
 
