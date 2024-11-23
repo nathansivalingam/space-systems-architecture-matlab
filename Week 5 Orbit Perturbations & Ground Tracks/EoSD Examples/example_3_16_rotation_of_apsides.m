@@ -1,5 +1,6 @@
+clc
 % What is the rotation of apsides for an Earth orbit with the following characteristics
-
+mu = 398600; % km
 h_p = 185; % km (periapsis altitude) 
 h_a = 555; % km (apoapsis altitude)
 i = 30; % deg (inclination)

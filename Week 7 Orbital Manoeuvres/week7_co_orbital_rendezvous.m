@@ -5,8 +5,8 @@ R_0 = 6378; % km [Input]
 
 % Assumed circular orbit 
 h_t = 350; % km
-Phi_i = deg2rad(5.116); % rad
-target_status = 'ahead'; % Is the target behind or ahead of the interceptor
+Phi_i = deg2rad(5.1113); % rad
+target_status = 'behind'; % Is the target behind or ahead of the interceptor
 r_t = R_0 + h_t; % km
 
 % TOF

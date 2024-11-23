@@ -1,9 +1,9 @@
-% Enter values
+clc
+% !IMPORTANT, Omega_dot CALCULATION ASSUMES THE PLANET IS EARTH
 e = 0;
-a = 700 + 6378; % km
+a = 700 + 6378.14; % km
 i = 30; % deg
 status = '';
-
 
 Omega_dot = -2.06474 * 10.^14 * a.^(-7/2) * cosd(i) * (1 - e.^2).^-2;
 
@@ -15,4 +15,4 @@ elseif (i == 90)
     status = 'polar';
 end
 
-fprintf('Omega_dot = %.4f deg, %s\n', abs(Omega_dot), status);
+fprintf('Omega_dot = %.4f°, %s\n', abs(Omega_dot), status);

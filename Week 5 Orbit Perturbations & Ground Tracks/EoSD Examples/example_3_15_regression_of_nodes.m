@@ -1,5 +1,5 @@
+clc
 % What is the regression of nodes for the STS30, which achieved a near-circular orbit with the following characteristics
-
 h_p = 270; % periapsis altitude [km]
 h_a = 279; % apoapsis altitude [km]
 i = 28.5; % inclination [deg]

@@ -1,7 +1,8 @@
+clc
 % This program is just to Solve Kepler's Equation using the Newton's Method
 % Input
-eccentricity = 0.37255;
-meanAnomaly = 3.6029; % rad (to go from deg to rad -> times 4 deg by Pi/180)
+eccentricity = 0.197605; % [e]
+meanAnomaly = 0.29815; % [M] rad (to go from deg to rad -> times 4 deg by Pi/180)
 chosenTolerance = 10.^-8;
 
 % Kepler's Equation
@@ -33,4 +34,4 @@ while true
 end
 
 % Final Output
-fprintf('E = %.4f rad = %.4f°\n', eccentricAnomaly, rad2deg(eccentricAnomaly));
+fprintf('E = %.5f rad = %.4f°\n', eccentricAnomaly, rad2deg(eccentricAnomaly));
