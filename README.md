@@ -13,6 +13,6 @@ These are an number of programs designed to aid in some aerospace calculations t
 - Week 9 Workshop Questions
 
 ### In Progress
-- Revise Week 4 Workshop Questions
+- Revise Week 4 Workshop Questions (3/6 Completed)
 
 ### Next Steps
