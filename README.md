@@ -16,4 +16,3 @@ These are an number of programs designed to aid in some aerospace calculations t
 - Revise Week 4 Workshop Questions
 
 ### Next Steps
-- Write Up the MATLAB Code for the Practice Final Exam
