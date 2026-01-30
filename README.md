@@ -1,6 +1,6 @@
 # AERO9500
 
-These are an number of programs designed to aid in some aerospace calculations that are required for a Space Systems Architecture class (AERO9500) at UNSW Sydney.
+This repository contains a collection of programs developed to support aerospace calculations for the Space Systems Architecture course (AERO9500) at UNSW Sydney. It also includes files from my final report, which involved the design and analysis of a satellite mission to track oceanic garbage gyres using STK and MATLAB for orbit analysis and mission planning.
 
 ### Completed
 - Week 1 Workshop Questions
